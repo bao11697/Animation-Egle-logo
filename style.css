@@ -1,0 +1,238 @@
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* text-align: center; */
+    background: url('./img/brick-wall-portrait.jpg') no-repeat ;
+    background-size: cover;
+    height: 100vh;
+    display: table;
+}
+
+.wrapper {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+}
+
+#Path_10 {
+    stroke: #fff;
+    /* fill: #CCC; */
+    stroke-width: 2;
+    stroke-dasharray: 407;
+    opacity: 1;
+    animation: animate 3s ease alternate infinite;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 407;
+    }
+    30%{
+        opacity: 0.4;
+        fill: none;
+        stroke-dashoffset: 407;
+    }
+    60%{
+        opacity: 0.6;
+        fill: none;
+        stroke-dashoffset: 100;
+    }
+    90%{
+        opacity: 0.8;
+        stroke-dashoffset: 20;
+    }
+    100%{
+        opacity: 1;
+        stroke-dashoffset: 0;
+    }
+}
+
+#Eagle-Team {
+    stroke: rgba(130, 190, 203, 0.864);
+    /* fill: rgba(190, 14, 14, 0.649); */
+    stroke-width: 4;
+    stroke-dasharray: 1176;
+    opacity: 1;
+    animation: logo 3s ease alternate infinite;
+}
+
+@keyframes logo {
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1176;
+    }
+    30%{
+        opacity: 0.4;
+        fill: none;
+        stroke-dashoffset: 900;
+    }
+    60%{
+        opacity: 0.6;
+        fill: none;
+        stroke-dashoffset: 600;
+    }
+    90%{
+        opacity: 0.8;
+        /* fill: rgba(255, 255, 255, 0); */
+        stroke-dashoffset: 200;
+    }
+    100%{
+        opacity: 1;
+        /* fill: rgba(255, 255, 255, 1); */
+        stroke-dashoffset: 0;
+        stroke-width: none;
+    }
+}
+
+
+
+
+/* -------------- */
+.place {
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    right: 0;
+    width: 20%;
+    height: 20%;
+    bottom: 0;
+    /* background-color: #050505; */
+}
+.cube {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: rotateX(30deg);
+    animation:  animatee 5s linear infinite;
+
+}
+
+@keyframes animatee {
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    } 
+ }
+.cube div {
+    position :absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+}
+
+.cube div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#181818,#454345);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(49px);
+
+}
+.cube .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#454345,#181818);
+    transform: rotateX(90deg) translateZ(50px);
+}
+.cube .top2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(114, 117, 116);
+    transform: translateY(-100px) rotateY(45deg);
+    border-radius: 50%;
+    
+}
+
+.cube .top2 strong{
+color: #202321;
+text-transform: uppercase;
+}
+
+.cube .top2 .owner {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 40%;
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+
+.cube .top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(83, 80, 82);
+    transform: translateZ(-140px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(255, 0, 195, 0.2),
+    0 0 28px rgba(107, 106, 107, 0.4),
+    0 0 38px rgba(144, 139, 143, 0.6),
+    0 0 48px rgba(187, 181, 185, 0.8),
+    0 0 58px rgb(249, 245, 248);
+
+
+}
+
+
+@keyframes chagecolor {
+    0%{
+        color: rgba(64, 63, 64, 0.2);
+    }
+    25%{
+        color: rgba(112, 103, 110, 0.4);
+    }
+    50%{
+        color: rgba(152, 142, 150, 0.6);
+    }
+    75%{
+        color: rgba(227, 197, 220, 0.8);
+    }
+    100%{
+        color: rgb(246, 246, 246);
+    }
+
+}
+
+.contact {
+    color: rgba(184, 199, 202, 0.5);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 35%;
+    align-items: center;
+}
+
+
+
+   
